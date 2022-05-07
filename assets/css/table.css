@@ -20,7 +20,7 @@ table th {
   font-weight: 900;
 }
 table td {
-  padding: 0.3rem 2rem;
+  padding: 0rem 2rem;
 }
 table a {
   text-decoration: none;
@@ -31,6 +31,7 @@ table .status {
   background-color: red;
   padding: 0.2rem 1rem;
   text-align: center;
+  margin: 0;
 }
 table .status-pending {
   background-color: #fff0c2;
@@ -68,9 +69,6 @@ table tr:nth-child(even) {
   visibility: hidden;
 }
 
-.conten {
-  width: 4px;
-}
 .conten:hover .elemento-editar--btn {
   visibility: visible;
 }
@@ -85,3 +83,4 @@ table tr:nth-child(even) {
 .containerTable{
   margin: 0;
 }
+

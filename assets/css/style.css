@@ -32,18 +32,6 @@ a:hover {
     background-color: var(--primary);
 }
 
-#sidebar-container {
-    min-height: 100vh;
-    display: none;
-}
-  
-#sidebar-container .logo{
-    padding: 0.875rem 1.25rem;
-}
-  
-#sidebar-container .menu {
-    width: 18rem;
-}
 
 #content {
     overflow-y: auto;
@@ -69,6 +57,7 @@ a:hover {
 }
 .row{
     margin: 0px;
+   
 }
 .text-muted{
    
@@ -91,3 +80,8 @@ a:hover {
     }
   }
   
+
+.navbar{
+    padding: 0;
+    padding-right: 20px;
+}
