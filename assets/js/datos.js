@@ -1,5 +1,5 @@
 class Datos{
-    constructor(fecha, evento, cuota, stake){
+    constructor(fecha, evento, cuota, stake,){
         this._fecha = fecha;
         this._evento = evento;
         this._cuota = cuota;
@@ -39,27 +39,21 @@ class Datos{
 }
 
 
-class Ingreso extends Datos{
+class Tike extends Datos{
     static contadorIngreso = 0;
 
-    constructor(fecha, evento, cuota, stake){
+    constructor(fecha, evento, cuota, stake, result){
         super(fecha, evento, cuota, stake);
-        this._id = ++Ingreso.contadorIngreso;
+        this._result = result;
+        this._id = ++Tike.contadorIngreso;
     }
     get id(){
         return this._id;
     }
-}
-
-
-class Egreso extends Datos{
-    static contadorEgreso = 0;
-
-    constructor(fecha, evento, cuota, stake){
-        super(fecha, evento, cuota, stake);
-        this._id = ++Egreso.contadorEgreso;
+    get result(){
+        return this._result;
     }
-    get id(){
-        return this._id;
+    set result(result){
+        this._result = result;
     }
 }

@@ -165,12 +165,12 @@
                       <div class="agregar-resultado">
                         <label>Resultado</label>
                         <select class="agregar-resultado-select" id="select">
-                          <option value="espera" selected="">?</option>
-                          <option value="positivo">+</option>
-                          <option value="masMedio">+-1/2</option>
-                          <option value="null">N</option>
-                          <option value="negativo">-</option>
-                          <option value="menosMas">-+1/2</option>
+                          <option value="?" selected="">?</option>
+                          <option value="+">+</option>
+                          <option value="+1/2">+1/2</option>
+                          <option value="N">N</option>
+                          <option value="-">-</option>
+                          <option value="-1/2">-1/2</option>
                         </select>
                       </div>
                       <div class="agregar-resultado">
@@ -179,10 +179,10 @@
                           class="agregar-resultado-select evento"
                           id="select"
                         >
-                          <option value="espera" selected="">Futbol</option>
-                          <option value="positivo">Teniz</option>
-                          <option value="masMedio">Batquebol</option>
-                          <option value="null">Otro</option>
+                          <option selected="">Futbol</option>
+                          <option>Teniz</option>
+                          <option>Batquebol</option>
+                          <option>Otro</option>
                         </select>
                       </div>
                       <div class="agregar-cuota">
@@ -258,14 +258,14 @@
                         <h6   class="text-muted">Egreso</h6>
                         <h4 id="egreso" class="font-weight-bold">0.0</h4>
                         <h6 class="text-success">
-                          <i id="porcentajeEgreso" class="icon ion-md-arrow-dropup-circle"></i> 75.50%
+                          <i id="porcentajeEgreso" class="icon ion-md-arrow-dropup-circle"></i> 
                         </h6>
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-6 d-flex stat my-3">
                       <div class="mx-auto">
                         <h6 class="text-muted">% Stake</h6>
-                        <h4 class="font-weight-bold">500</h4>
+                        <h4 id="porcentajeStake" class="font-weight-bold">500</h4>
                         <h6 class="text-success">
                           <i class="icon ion-md-arrow-dropup-circle"></i> 15.50%
                         </h6>
@@ -274,7 +274,7 @@
                     <div class="col-lg-3 col-md-6 d-flex stat my-3">
                       <div class="mx-auto">
                         <h6 class="text-muted">Stake</h6>
-                        <h4 class="font-weight-bold">500</h4>
+                        <h4 id="stake" class="font-weight-bold">500</h4>
                         <h6 class="text-success">
                           <i class="icon ion-md-arrow-dropup-circle"></i> 15.50%
                         </h6>
@@ -325,13 +325,12 @@
                       <th>Evento</th>
                       <th>Cuota</th>
                       <th>Stake</th>
-                      <th>Resultado</th>
-                      <th>Ganancia</th>
-                      <th>Ganancia Neta</th>
+                      <th>Estado</th>
+                      <th>Beneficio</th>
                     </tr>
                   </thead>
-                  <tbody class="conten">
-                    <tr>
+                  <tbody id="listaRegistro">
+                     <!-- <tr class="conten">
                       <td>1</td>
                       <td>2022/05/06</td>
                       <td>futbol</td>
@@ -345,7 +344,7 @@
                           <p class="fa-solid fa-pen-to-square"></p>
                         </div>
                       </td>
-                    </tr>
+                    </tr>  -->
                   </tbody>
                 </table>
                 <!-- fin registro -->
@@ -388,6 +387,7 @@
     ></script>
     
     <!-- documentos js -->
+    <script src="/assets/js/formatos.js"></script>
     <script src="/assets/js/form.js"></script>
     <script src="/assets/js/datos.js"></script>
     <script src="/assets/js/app.js"></script>

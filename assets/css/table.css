@@ -34,8 +34,8 @@ table .status {
   margin: 0;
 }
 table .status-pending {
-  background-color: #fff0c2;
-  color: #a68b00;
+  background-color: #918c8cc9;
+  color: #ffffff;
 }
 table .status-paid {
   background-color: #c8e6c9;
