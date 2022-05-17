@@ -17,8 +17,11 @@
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/menu.css" />
+    <link rel="stylesheet" href="/assets/css/varibles.css">
+    <link rel="stylesheet" href="/assets/css/miniApps-CSS/popupWindow.css" />
+    <link rel="stylesheet" href="/assets/css/miniApps-CSS/switch.css">
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/menu.css" />
     <link rel="stylesheet" href="assets/css/form.css" />
     <link rel="stylesheet" href="assets/css/table.css" />
 
@@ -39,9 +42,8 @@
 
   <body>
     <div class="d-flex" id="content-wrapper">
-      
       <div class="w-100">
-        <!-- Navbar -->
+        <!-- ---------------Navbar------------------ -->
         <nav
           class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
         >
@@ -81,7 +83,11 @@
                 <a href="" target="_blank" class="social-netwokrs__link-item">
                   <i class="fa-brands fa-facebook"></i>
                 </a>
-                <a href="https://web.whatsapp.com/" target="_blank" class="social-netwokrs__link-item">
+                <a
+                  href="https://web.whatsapp.com/"
+                  target="_blank"
+                  class="social-netwokrs__link-item"
+                >
                   <i class="fa-brands fa-whatsapp"></i>
                 </a>
                 <a href="" target="_blank" class="social-netwokrs__link-item">
@@ -114,7 +120,15 @@
             </div>
             <!-- fin menu -->
 
+            <!-- ------info perfil------- -->
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <!-- button switck -->
+              <div class="switch" id="switch">
+                <span><i class="fas fa-sun"></i></span>
+                <span><i class="fas fa-moon"></i></span>
+              </div>
+              <!-- fin button switch -->
+
               <li class="nav-item dropdown">
                 <a
                   class="nav-link text-dark dropdown-toggle"
@@ -143,19 +157,19 @@
                 </div>
               </li>
             </ul>
+            <!-- ------fin info perfil------- -->
           </div>
         </nav>
-        <!-- Fin Navbar -->
+        <!-- -------------Fin Navbar----------------- -->
 
         <!-- Page Content -->
-        <div id="content" class="bg-grey w-100">
-          <section class="bg-light">
+        <div id="content" class="w-100">
+          <!------ formulario tike------->
+          <section>
             <div class="container">
               <div class="row">
                 <h3 class="row-tex">Tike Apuesta</h3>
                 <div class="col-lg-9 col-md-8">
-                  <!-- formulario -->
-
                   <form class="form" action="#">
                     <div class="agregar">
                       <div class="agregar-fecha">
@@ -215,13 +229,13 @@
                       </div>
                     </div>
                   </form>
-                  <!-- fin formulario -->
                 </div>
               </div>
             </div>
           </section>
-
-          <section class="bg-mix py-3">
+          <!------ fin formulario tike------->
+          <!-- ------info estadisticas--------- -->
+          <section class="py-3">
             <div class="container">
               <div class="card rounded-0">
                 <div class="card-body">
@@ -246,26 +260,31 @@
                     </div>
                     <div class="col-lg-3 col-md-6 d-flex stat my-3">
                       <div class="mx-auto">
-                        <h6  class="text-muted">Ingresos</h6>
+                        <h6 class="text-muted">Ingresos</h6>
                         <h4 id="ingreso" class="font-weight-bold">0.0</h4>
                         <h6 class="text-success">
-                          <i  class="icon ion-md-arrow-dropup-circle"></i> 75.50%
+                          <i class="icon ion-md-arrow-dropup-circle"></i> 75.50%
                         </h6>
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-6 d-flex stat my-3">
                       <div class="mx-auto">
-                        <h6   class="text-muted">Egreso</h6>
+                        <h6 class="text-muted">Egreso</h6>
                         <h4 id="egreso" class="font-weight-bold">0.0</h4>
                         <h6 class="text-success">
-                          <i id="porcentajeEgreso" class="icon ion-md-arrow-dropup-circle"></i> 
+                          <i
+                            id="porcentajeEgreso"
+                            class="icon ion-md-arrow-dropup-circle"
+                          ></i>
                         </h6>
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-6 d-flex stat my-3">
                       <div class="mx-auto">
                         <h6 class="text-muted">% Stake</h6>
-                        <h4 id="porcentajeStake" class="font-weight-bold">500</h4>
+                        <h4 id="porcentajeStake" class="font-weight-bold">
+                          500
+                        </h4>
                         <h6 class="text-success">
                           <i class="icon ion-md-arrow-dropup-circle"></i> 15.50%
                         </h6>
@@ -292,18 +311,13 @@
                     <div class="col-lg-3 col-md-6 d-flex stat my-3">
                       <div class="mx-auto">
                         <div>
-                          <button
-                            class="btn btn-primary w-100 align-self-center"
-                          >
+                          <div class="btn-general btnActivos" id="modificarActivos">
+                            <span></span>
                             Modificar Activos
-                          </button>
+                          </div>
                         </div>
                         <div>
-                          <button
-                            class="btn btn-primary w-100 align-self-center"
-                          >
-                            Finalizar Mes
-                          </button>
+                          <div class="btn-general"><span></span> Finalizar Mes</div>
                         </div>
                       </div>
                     </div>
@@ -312,11 +326,35 @@
               </div>
             </div>
           </section>
-
+          <!-- ------info estadisticas--------- -->
+          <!-------popupWindow   Modificar Activos--------->
+          <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+              <a href="#a" id="btn-cerrar-popup" class="btn-cerrar-popup"
+                ><i class="fas fa-times"></i
+              ></a>
+              <h3>SUSCRIBETE</h3>
+              <h4>y resibe un descuento mamadicimo</h4>
+              <form action="">
+                <div class="contenedor-inputs">
+                  <div class="input">
+                    <input type="number"/>
+                    <label for="">Activo Inicial</label>
+                  </div>
+                  <div class="input">
+                    <input type="number"/>
+                    <label for="">Porcentaje A Invertir</label>
+                  </div>
+                </div>
+                <div class="btn-general" value="Modificar">MODIFICAR<span></span></div>
+              </form>
+            </div>
+          </div>
+          <!-------Fin popupWindow Modificar Activos--------->
+          <!-- -------registro tabla------>
           <section>
             <div class="containerTable">
               <div class="row">
-                <!-- registro -->
                 <table>
                   <thead>
                     <tr>
@@ -330,7 +368,7 @@
                     </tr>
                   </thead>
                   <tbody id="listaRegistro">
-                     <!-- <tr class="conten">
+                    <!-- <tr class="conten">
                       <td>1</td>
                       <td>2022/05/06</td>
                       <td>futbol</td>
@@ -347,10 +385,10 @@
                     </tr>  -->
                   </tbody>
                 </table>
-                <!-- fin registro -->
               </div>
             </div>
           </section>
+          <!-- ------fin registro tabla ------->
         </div>
       </div>
     </div>
@@ -385,8 +423,10 @@
       integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
       crossorigin="anonymous"
     ></script>
-    
+
     <!-- documentos js -->
+    <script src="/assets/js/miniApps/popupWindow.js"></script>
+    <script src="/assets/js/miniApps/switch.js"></script>
     <script src="/assets/js/formatos.js"></script>
     <script src="/assets/js/form.js"></script>
     <script src="/assets/js/datos.js"></script>

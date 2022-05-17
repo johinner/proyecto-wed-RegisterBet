@@ -8,6 +8,8 @@ const Registro = [
      new Tike('20/9/6', 'futbol', 2, 4000, '-'),
      new Tike('20/9/6', 'futbol', 5, 4000, '-1/2'),
 ];
+
+
 const fragment = new DocumentFragment();
 
 cargarEstadisticas = () => {
@@ -37,33 +39,40 @@ cargarEstadisticas = () => {
 }
 
 cargarRegitro = (lista) => {
+    
     const List = document.getElementById("listaRegistro");
     List.textContent = "";
     
     lista.forEach(item => {
         const element = document.createElement('tr');
         element.className = `conten`
-        let beneficio, estado = {class:'status-pending',nombre:'Nula'}
+        let beneficio, estado = {class:'status-pending',nombre:'Null'}
         beneficio = 0;
         
 
         if(item.result === '+'){
           beneficio = (item.cuota * item.stake) - item.stake;
+          estado.nombre = 'positive'
+          estado.class = 'status-paid'
         }
         if(item.result === '+1/2'){
           beneficio = ((item.cuota * item.stake) - item.stake)/2;
+          estado.nombre = '1/2 positive'
+          estado.class = 'status-paid'
         }
         if(item.result === '-'){
           beneficio = item.stake * -1
           estado.class = 'status-unpaid'
+          estado.nombre = 'negative'
         }
         if(item.result === '-1/2'){
             beneficio = item.stake * -0.5
             estado.class = 'status-unpaid'
+            estado.nombre = '1/2 negative'
         }
 
         element.innerHTML = 
-    `  <td>1</td>
+    `  <td>${item.id}</td>
     <td>2022/05/06</td>
     <td>${item.evento}</td>
     <td>${item.cuota}</td>
