@@ -65,6 +65,8 @@ table tr:nth-child(even) {
   border: none;
   cursor: pointer;
   visibility: hidden;
+  outline: none;
+ 
 }
 
 .conten:hover .elemento-editar--btn {

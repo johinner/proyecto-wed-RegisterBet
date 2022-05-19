@@ -1,31 +1,31 @@
-const cargarApp = () => {
-    cargarRegitro(Registro);
-    cargarEstadisticas();
-  }
+let bankInicial = 0;
+let porcentajeStake = 0;
 
 const Registro = [
-     new Tike('20/9/6', 'futbol', 4, 5000, '+1/2'),
-     new Tike('20/9/6', 'futbol', 2, 4000, '-'),
-     new Tike('20/9/6', 'futbol', 5, 4000, '-1/2'),
+  new Tike('20/9/6', 'futbol', 4, 5000, '+1/2'),
+  new Tike('20/9/6', 'futbol', 2, 4000, '-'),
+  new Tike('20/9/6', 'futbol', 5, 4000, '-1/2'),
 ];
 
+cargarApp = () =>{
+  cargarRegitro(Registro)
+  cargarEstadisticas()
+}
 
 const fragment = new DocumentFragment();
 
 cargarEstadisticas = () => {
-    let activoInicial = 10000;
-    let porcentajeStake = 10;
-
+ 
     const beneficio = document.querySelectorAll('.elemento-valor')
     let ingresos = 0;
     beneficio.forEach(item =>{
         ingresos = ingresos + parseInt(item.dataset.beneficio)
     })
 
-    document.getElementById('activoActual').innerHTML = formatoMoneda(activoInicial + ingresos);
-    document.getElementById("activoInicial").innerHTML = formatoMoneda(activoInicial);
+    document.getElementById('bankActual').innerHTML = formatoMoneda(bankInicial + ingresos);
+    document.getElementById("bankInicial").innerHTML = formatoMoneda(bankInicial);
     document.getElementById("porcentajeStake").innerHTML = porcentajeStake;
-    document.getElementById("stake").innerHTML = formatoMoneda((porcentajeStake*(activoInicial+ingresos))/100)
+    document.getElementById("stake").innerHTML = formatoMoneda((porcentajeStake*(bankInicial+ingresos))/100)
 
     const ingreso = document.getElementById('ingreso');
     const egreso =  document.getElementById('egreso');
@@ -80,8 +80,9 @@ cargarRegitro = (lista) => {
     <td><p class="status ${estado.class}">${estado.nombre}</p></td>
     <td class="elemento">
       <span data-beneficio='${beneficio}' class="elemento-valor">${formatoMoneda(beneficio)}</span>
-      <div typo="button" class="elemento-editar--btn">
-        <p class="fa-solid fa-pen-to-square"></p>
+      <div class="elemento-editar--btn" onclick='modificarItemTike(${item.id})'>
+      <ion-icon class="fa-solid fa-pen-to-square"
+      ></ion-icon>
       </div>
     </td>
     `;
@@ -91,4 +92,4 @@ cargarRegitro = (lista) => {
     List.appendChild(fragment);
 }
 
-cargarApp();
+cargarApp()

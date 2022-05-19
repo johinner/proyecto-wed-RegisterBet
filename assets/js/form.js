@@ -11,8 +11,7 @@ const form = document
     const stake = parseInt(e.path[0][4].value);
 
     Registro.push(new Tike(fecha, evento, cuota, stake, result));
-    
-    cargarApp();
+    cargarApp()
   });
 
   

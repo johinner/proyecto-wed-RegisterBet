@@ -1,6 +1,5 @@
 /* -------POPUT------- */
 
-
 .overlay{
     background: rgba(0,0,0,.5);
 	position: fixed;
@@ -11,7 +10,7 @@
 	align-items: center;
 	justify-content: center;
 	display: flex;	
-	visibility: hidden;
+	visibility: hidden; 
 }
 .overlay.active{
 	visibility: visible;
@@ -44,14 +43,14 @@
 }
 
 .popup h3 {
-	font-size: 36px;
+	font-size: 28px;
 	font-weight: 600;
 	margin-bottom: 10px;
 	 opacity: 0; 
 }
 
-.popup h4 {
-	font-size: 26px;
+.popup h5 {
+	font-size: 18px;
 	font-weight: 300;
 	margin-bottom: 40px;
 	 opacity: 0; 
@@ -96,11 +95,13 @@
    transition: all 0.3s ease;
 }
 
-.input input:focus ~label{
+.input input:focus ~label,
+.input input:valid ~label{
 	transform: translateY(-20px);
     font-size: 16px;
     color: var(--primary);
 }
+
 
 .input input:focus{
     border-color: var(--primary);
@@ -112,11 +113,12 @@
 	margin-right: auto;
 }
 
+
 /* -------ANIMACIONES------- */
 
 .popup.active{opacity: 1; transform: scale(1);}
 .popup.active h3{animation: entradaTitulo .8s ease .5s forwards;}
-.popup.active h4{animation: entradaSubtitulo .8s ease .5s forwards;}
+.popup.active h5{animation: entradaSubtitulo .8s ease .5s forwards;}
 .popup.active .contenedor-inputs{animation: entradaInputs 1s ease 1s forwards;} 
 
 @keyframes entradaTitulo{

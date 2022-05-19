@@ -17,9 +17,10 @@
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css/varibles.css">
-    <link rel="stylesheet" href="/assets/css/miniApps-CSS/popupWindow.css" />
-    <link rel="stylesheet" href="/assets/css/miniApps-CSS/switch.css">
+    <!-- <link rel="stylesheet" href="/assets/css/miniApps-CSS/btnDelete.css"> -->
+    <link rel="stylesheet" href="/assets/css/varibles.css" />
+    <link rel="stylesheet" href="/assets/css/miniApps-CSS/popupBank.css" />
+    <link rel="stylesheet" href="/assets/css/miniApps-CSS/switch.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/menu.css" />
     <link rel="stylesheet" href="assets/css/form.css" />
@@ -242,8 +243,8 @@
                   <div class="row">
                     <div class="col-lg-3 col-md-6 d-flex stat my-3">
                       <div class="mx-auto">
-                        <h6 class="text-muted">Activo Actual</h6>
-                        <h4 id="activoActual" class="font-weight-bold">0.0</h4>
+                        <h6 class="text-muted">Bank Actual</h6>
+                        <h4 id="bankActual" class="font-weight-bold">0.0</h4>
                         <h6 class="text-success">
                           <i class="icon ion-md-arrow-dropup-circle"></i> 50.50%
                         </h6>
@@ -251,8 +252,8 @@
                     </div>
                     <div class="col-lg-3 col-md-6 d-flex stat my-3">
                       <div class="mx-auto">
-                        <h6 class="text-muted">Activo Inical</h6>
-                        <h4 id="activoInicial" class="font-weight-bold">0.0</h4>
+                        <h6 class="text-muted">Bank Inical</h6>
+                        <h4 id="bankInicial" class="font-weight-bold">0.0</h4>
                         <h6 class="text-success">
                           <i class="icon ion-md-arrow-dropup-circle"></i> 25.50%
                         </h6>
@@ -311,13 +312,18 @@
                     <div class="col-lg-3 col-md-6 d-flex stat my-3">
                       <div class="mx-auto">
                         <div>
-                          <div class="btn-general btnActivos" id="modificarActivos">
+                          <div
+                            class="btn-general btnActivos"
+                            id="modificarBank"
+                          >
                             <span></span>
-                            Modificar Activos
+                            Modificar Bank
                           </div>
                         </div>
                         <div>
-                          <div class="btn-general"><span></span> Finalizar Mes</div>
+                          <div class="btn-general">
+                            <span></span> Finalizar Mes
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -327,30 +333,34 @@
             </div>
           </section>
           <!-- ------info estadisticas--------- -->
-          <!-------popupWindow   Modificar Activos--------->
+          <!-------popupWindow--------->
           <div class="overlay" id="overlay">
             <div class="popup" id="popup">
               <a href="#a" id="btn-cerrar-popup" class="btn-cerrar-popup"
                 ><i class="fas fa-times"></i
               ></a>
-              <h3>SUSCRIBETE</h3>
-              <h4>y resibe un descuento mamadicimo</h4>
+              <h3 class="popup-title">title</h3>
+              <h5 class="popup-subtitle">
+                subtitle
+              </h5>
               <form action="">
                 <div class="contenedor-inputs">
                   <div class="input">
-                    <input type="number"/>
-                    <label for="">Activo Inicial</label>
+                    <input  id="bank" type="number" required/>
+                    <label >Bank Inicial</label>
                   </div>
-                  <div class="input">
-                    <input type="number"/>
-                    <label for="">Porcentaje A Invertir</label>
+                  <div class="input" >
+                    <input id="porcentaje" type="number" required/>
+                    <label>Porcentaje A Invertir</label>
                   </div>
                 </div>
-                <div class="btn-general" value="Modificar">MODIFICAR<span></span></div>
+                <div id="modificar" class="btn-general" value="Modificar">
+                  MODIFICAR<span></span>
+                </div>
               </form>
             </div>
           </div>
-          <!-------Fin popupWindow Modificar Activos--------->
+          <!-------Fin popupWindow--------->
           <!-- -------registro tabla------>
           <section>
             <div class="containerTable">
@@ -368,21 +378,6 @@
                     </tr>
                   </thead>
                   <tbody id="listaRegistro">
-                    <!-- <tr class="conten">
-                      <td>1</td>
-                      <td>2022/05/06</td>
-                      <td>futbol</td>
-                      <td>5.8</td>
-                      <td>$50,000</td>
-                      <td><p class="status status-unpaid">Positivo</p></td>
-                      <td>$50,000</td>
-                      <td class="elemento">
-                        <span class="elemento-valor">$50,000</span>
-                        <div typo="button" class="elemento-editar--btn">
-                          <p class="fa-solid fa-pen-to-square"></p>
-                        </div>
-                      </td>
-                    </tr>  -->
                   </tbody>
                 </table>
               </div>
@@ -392,6 +387,23 @@
         </div>
       </div>
     </div>
+
+     <!-- Icons -->
+     <svg width="0" height="0" style="display: none" viewBox="0 0 25 25">
+      <!-- icon delete -->
+      <symbol id="icon-trash-top">
+        <path
+          d="M24.429,5.571H19.071V4.679A2.682,2.682,0,0,0,16.393,2H12.821a2.682,2.682,0,0,0-2.679,2.679v.893H4.786A1.788,1.788,0,0,0,3,7.357V8.25a.893.893,0,0,0,.893.893H25.321a.893.893,0,0,0,.893-.893V7.357A1.788,1.788,0,0,0,24.429,5.571Zm-12.5-.893a.894.894,0,0,1,.893-.893h3.571a.894.894,0,0,1,.893.893v.893H11.929Z"
+        />
+      </symbol>
+      <symbol id="icon-trash-bottom"> 
+        <path
+          d="M6,12V25.393a2.682,2.682,0,0,0,2.679,2.679h12.5a2.682,2.682,0,0,0,2.679-2.679V12Zm5.357,11.607a.893.893,0,0,1-1.786,0V15.571a.893.893,0,1,1,1.786,0Zm4.464,0a.893.893,0,0,1-1.786,0V15.571a.893.893,0,1,1,1.786,0Zm4.464,0a.893.893,0,0,1-1.786,0V15.571a.893.893,0,1,1,1.786,0Z"
+          transform="translate(-0.321 -1.071)"
+        />
+      </symbol>
+      <!-- fin icon delete -->
+    </svg>
 
     <!-- Optional JavaScript -->
     <script
@@ -425,11 +437,13 @@
     ></script>
 
     <!-- documentos js -->
-    <script src="/assets/js/miniApps/popupWindow.js"></script>
+    <!-- <script src="/assets/js/miniApps/btnDeletes.js"></script> -->
+    <script src="/assets/js/datos.js"></script>
+    <script src="/assets/js/miniApps/popupBank.js"></script>
     <script src="/assets/js/miniApps/switch.js"></script>
     <script src="/assets/js/formatos.js"></script>
     <script src="/assets/js/form.js"></script>
-    <script src="/assets/js/datos.js"></script>
+    
     <script src="/assets/js/app.js"></script>
   </body>
 </html>
