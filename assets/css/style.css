@@ -1,4 +1,3 @@
-
 body {
     overflow: hidden;
     font-weight: 400;
@@ -84,9 +83,9 @@ a:hover {
    
     width: 100px;
 }
-.row button{
+/* .row button{
     margin: 8px;
-}
+} */
 .row-tex{
     margin-top: 40px;
     text-align: center;

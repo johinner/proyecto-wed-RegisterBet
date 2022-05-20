@@ -112,7 +112,10 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-
+.popup .conten-btn{
+	display: flex;
+	justify-content: space-evenly;
+}
 
 /* -------ANIMACIONES------- */
 

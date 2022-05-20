@@ -1,35 +1,24 @@
-
-:root {
-  --color-danger: #e00000;
-  --color-danger-hover: #ff0000;
-}
-/* body {
-  display: grid;
-  place-content: center;
-  height: 100vh;
-  background-color: #f3f6fa;
-} */
 svg {
   fill: currentColor;
 }
 .btn-delete{
+  
   display: flex;
   align-items: center;
-  background-color: var(--color-danger);
+  background-color: var(--btn-background);
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 1rem;
-  padding: 0.8rem 0.9rem;
-  border-radius: 10px;
+  font-size: 0.8rem;
+  padding: 0rem 0.8rem;
+  border-radius: 5px;
   overflow: hidden;
   box-shadow: -10px 10px 50px #b3b3b3, 10px -10px 50px #fff;
   color: #fff;
   transition: background 0.4s;
+  
 }
-.btn-delete:hover{
-  background-color: var(--color-danger-hover);
-}
+
 /* button icon */
 .btn-delete__icon{
   --btn-size: 1.56rem;
@@ -71,6 +60,7 @@ svg {
 /* button text */
 .btn-delete__text{
   font-family:sans-serif;
+  text-transform: uppercase;
 }
 .btn-delete.delete .btn-delete__text{
   font-family:sans-serif;
@@ -89,4 +79,10 @@ svg {
   85%, 95%{
     opacity: 0;
   }
+}
+
+.btn-delete:hover {
+  color: #c0e4da;
+  background: var(--btn-background-hover);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.301);
 }
