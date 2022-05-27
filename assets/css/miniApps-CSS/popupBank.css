@@ -1,4 +1,11 @@
 /* -------POPUT------- */
+.visible{
+  display: none;
+}
+
+.active{
+	visibility: visible;
+}
 
 .overlay{
     background: rgba(0,0,0,.5);
@@ -155,3 +162,8 @@
 		opacity: 1;
 	}
 } 
+
+/* inputs Modificar Tike  */
+#inputsModifTike{
+background-color:  red;
+}

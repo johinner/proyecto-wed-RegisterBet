@@ -1,278 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!-- Styles -->
+    <!-- <link rel="stylesheet" href="/assets/css/miniApps-CSS/btnDelete.css"> -->
+    <link rel="stylesheet" href="./assets/css/varibles.css" />
+    <link rel="stylesheet" href="./assets/css/miniApps-CSS/btnDelete.css" />
+    <link rel="stylesheet" href="./assets/css/miniApps-CSS/popupBank.css" />
+    <link rel="stylesheet" href="./assets/css/miniApps-CSS/switch.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/menu.css" />
+    <link rel="stylesheet" href="./assets/css/form.css" />
+    <link rel="stylesheet" href="./assets/css/table.css" />
+    <link rel="stylesheet" href="./assets/css/miniApps-CSS/input.css" />
 
-  <!-- Styles -->
-  <!-- <link rel="stylesheet" href="/assets/css/miniApps-CSS/btnDelete.css"> -->
-  <link rel="stylesheet" href="/assets/css/varibles.css" />
-  <link rel="stylesheet" href="/assets/css/miniApps-CSS/btnDelete.css" />
-  <link rel="stylesheet" href="/assets/css/miniApps-CSS/popupBank.css" />
-  <link rel="stylesheet" href="/assets/css/miniApps-CSS/switch.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/menu.css" />
-  <link rel="stylesheet" href="assets/css/form.css" />
-  <link rel="stylesheet" href="assets/css/table.css" />
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:300,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Convergence&family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Muli:300,700&display=swap" rel="stylesheet" />
+    <!-- Ionic icons -->
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Ionic icons -->
-  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet" />
+    <title>Registro Apuestas</title>
+  </head>
 
-  <title>Dashboard - Templune</title>
-</head>
-
-<body>
-  <div class="d-flex" id="content-wrapper">
-    <div class="w-100">
-      <!-- ---------------Navbar------------------ -->
-      <nav class="navbar-expand-lg">
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button> -->
-
-        <div class="navbar-collapse" id="navbarSupportedContent">
-          <!--inicio  menu -->
-          <div class="nav-main">
-            <!-- BTN -->
-            <input type="checkbox" class="nav-main__btn-collapse" id="nav-main__checkbox" />
-            <label for="nav-main__checkbox" class="nav-main__btn-collapse-icon">
-              <span class="icon-nav"></span>
-              <span class="icon-nav"></span>
-              <span class="icon-nav"></span>
-            </label>
-            <!-- BOX -->
-            <div class="nav-main__btn-collapse-bg"></div>
-            <!-- Social -->
-            <div class="social-networks">
-              <a href="" target="_blank" class="social-netwokrs__link-item">
-                <i class="fa-brands fa-facebook"></i>
-              </a>
-              <a href="https://web.whatsapp.com/" target="_blank" class="social-netwokrs__link-item">
-                <i class="fa-brands fa-whatsapp"></i>
-              </a>
-              <a href="" target="_blank" class="social-netwokrs__link-item">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-              <a href="" target="_blank" class="social-netwokrs__link-item">
-                <i class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
-
-            <!-- sitios -->
-            <div class="nav-main__menu">
-              <a href="" class="nav-main__link-item">
-                <i class="fa-solid fa-chart-simple"></i>
-                Control Apuesta
-              </a>
-              <a href="" class="nav-main__link-item">
-                <i class="fa-solid fa-arrow-up-right-dots"></i>
-                Reto Escalera
-              </a>
-              <a href="" class="nav-main__link-item">
-                <i class="fa-solid fa-chart-column"></i>
-                Estadisticas
-              </a>
-              <a href="" class="nav-main__link-item">
-                <i class="fa-solid fa-message-arrow-up-right"></i>
-                A cerca de
-              </a>
-            </div>
+  <body>
+    <!-- ---------------Navbar------------------ -->
+    <nav class="navbar-expand-lg">
+      <div class="navbar-collapse" id="navbarSupportedContent">
+        <!--inicio  menu -->
+        <div class="nav-main">
+          <!-- BTN -->
+          <input
+            type="checkbox"
+            class="nav-main__btn-collapse"
+            id="nav-main__checkbox"
+          />
+          <label for="nav-main__checkbox" class="nav-main__btn-collapse-icon">
+            <span class="icon-nav"></span>
+            <span class="icon-nav"></span>
+            <span class="icon-nav"></span>
+          </label>
+          <!-- BOX -->
+          <div class="nav-main__btn-collapse-bg"></div>
+          <!-- Social -->
+          <div class="social-networks">
+            <a href="" target="_blank" class="social-netwokrs__link-item">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              href="https://web.whatsapp.com/"
+              target="_blank"
+              class="social-netwokrs__link-item"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="" target="_blank" class="social-netwokrs__link-item">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="" target="_blank" class="social-netwokrs__link-item">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
           </div>
-          <!-- fin menu -->
 
-          <!-- ------info perfil------- -->
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <!-- button switck -->
-            <div class="switch" id="switch">
-              <span><i class="fas fa-sun"></i></span>
-              <span><i class="fas fa-moon"></i></span>
-            </div>
-            <!-- fin button switch -->
-
-            <li class="nav-item dropdown">
-              <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="assets/img/user-1.png" class="img-fluid rounded-circle avatar mr-2"
-                  alt="https://generated.photos/" />
-                Johinner Madariaga Corpas
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Mi perfil</a>
-                <a class="dropdown-item" href="#">Suscripciones</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Cerrar sesión</a>
-              </div>
-            </li>
-          </ul>
-          <!-- ------fin info perfil------- -->
+          <!-- sitios -->
+          <div class="nav-main__menu">
+            <a href="" class="nav-main__link-item">
+              <i class="fa-solid fa-chart-simple"></i>
+              Control Apuesta
+            </a>
+            <a href="" class="nav-main__link-item">
+              <i class="fa-solid fa-arrow-up-right-dots"></i>
+              Reto Escalera
+            </a>
+            <a href="" class="nav-main__link-item">
+              <i class="fa-solid fa-chart-column"></i>
+              Estadisticas
+            </a>
+            <a href="" class="nav-main__link-item">
+              <i class="fa-solid fa-message-arrow-up-right"></i>
+              A cerca de
+            </a>
+          </div>
         </div>
-      </nav>
-      <!-- -------------Fin Navbar----------------- -->
+        <!-- fin menu -->
 
-      <!-- Page Content -->
-      <div id="content" class="w-100">
+        <!-- ------info perfil------- -->
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <!-- button switck -->
+          <div class="switch" id="switch">
+            <span><i class="fas fa-sun"></i></span>
+            <span><i class="fas fa-moon"></i></span>
+          </div>
+          <!-- fin button switch -->
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link text-dark dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img
+                src="assets/img/user-1.png"
+                class="img-fluid rounded-circle avatar mr-2"
+                alt="https://generated.photos/"
+              />
+              Johinner Madariaga Corpas
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" href="#">Mi perfil</a>
+              <a class="dropdown-item" href="#">Suscripciones</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Cerrar sesión</a>
+            </div>
+          </li>
+        </ul>
+        <!-- ------fin info perfil------- -->
+      </div>
+    </nav>
+    <!-- -------------Fin Navbar----------------- -->
+
+    <!-- Page Content -->
+    <div id="content" class="w-100">
+      <section class="container-estadisticas">
         <!------ formulario tike------->
-        <section>
-          <div class="container">
-            <div class="row">
-              <h3 class="row-tex">Tike Apuesta</h3>
-              <div class="col-lg-9 col-md-8">
-                <form class="form" action="#">
-                  <div class="agregar">
-                    <div class="agregar-fecha">
-                      <label>Fecha</label>
-                      <input type="date" id="fecha" value="2022-05-01" />
-                    </div>
-                    <div class="agregar-resultado">
-                      <label>Resultado</label>
-                      <select class="agregar-resultado-select" id="select">
-                        <option value="?" selected="">?</option>
-                        <option value="+">+</option>
-                        <option value="+1/2">+1/2</option>
-                        <option value="N">N</option>
-                        <option value="-">-</option>
-                        <option value="-1/2">-1/2</option>
-                      </select>
-                    </div>
-                    <div class="agregar-resultado">
-                      <label>Evento</label>
-                      <select class="agregar-resultado-select evento" id="select">
-                        <option selected="">Futbol</option>
-                        <option>Teniz</option>
-                        <option>Batquebol</option>
-                        <option>Otro</option>
-                      </select>
-                    </div>
-                    <div class="agregar-cuota">
-                      <label>Cuota</label>
-                      <input type="number" class="agregar_cuota" required placeholder="2.7" />
-                    </div>
-                    <div class="agregar-stake">
-                      <label>Stake</label>
-                      <input type="number" class="agregar_stake" required placeholder="Stake sugerido" />
-                    </div>
-                    <div class="agregar-btn">
-                      <button class="agregar-btn-btn" type="submit">
-                        <ion-icon name="checkmark-circle-outline" role="img" class="md hydrated"
-                          aria-label="checkmark circle outline"></ion-icon>
-                      </button>
-                    </div>
+        <div class="insertTike">
+          <div class="form">
+            <h1>Apuesta A Registrar</h1>
+          </div>
+          <div class="form">
+            <input
+              type="date"
+              id="fecha"
+              class="form__input"
+              autocomplete="off"
+              placeholder=" "
+            />
+            <label for="email" class="form__label">Fecha</label>
+          </div>
+
+          <div class="form">
+            <input
+              type="number"
+              id="cuota"
+              class="form__input"
+              autocomplete="off"
+              placeholder=" "
+            />
+            <label for="email" class="form__label">Cuota</label>
+          </div>
+          <div class="form">
+            <input
+              type="number"
+              id="stake"
+              class="form__input"
+              autocomplete="off"
+              placeholder=" "
+            />
+            <label for="email" class="form__label">Stake</label>
+          </div>
+          <div class="contedorSelect">
+            <form action="">
+              <div class="selectbox">
+                <div class="select" id="select">
+                  <div class="contenido-select">
+                    <h1 class="titulo">Resultado</h1>
+                    <p class="descripcion">results de la Apuesta</p>
                   </div>
-                </form>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+
+                <div class="opciones" id="opciones">
+                  <a href="#" class="opcion">
+                    <div class="contenido-opcion">
+                      <div class="contenido-opcion-logo">
+                        <h2>-</h2>
+                        <h2>+</h2>
+                      </div>
+                      <div class="contenido-opcion-texto">
+                        <h4 class="titulo">- 50%</h4>
+                        <p class="descripcion">Pierdes la Mitad</p>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="opcion">
+                    <div class="contenido-opcion">
+                      <div class="contenido-opcion-logo">
+                        <h2>+</h2>
+                        <h2>-</h2>
+                      </div>
+                      <div class="contenido-opcion-texto">
+                        <h4 class="titulo">+ 50%</h4>
+                        <p class="descripcion">Ganas la Mitad</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <input type="hidden" name="resultado" id="inputSelect" value="" />
+            </form>
+          </div>
+          <button
+            id="btnRegistral"
+            class="btn-general btn-tike"
+            data-modificar=""
+            value="Modificar"
+          >
+            registral<span></span>
+          </button>
+        </div>
+        <!------ fin formulario tike------->
+        <!-- info estadisticas  -->
+
+        <div class="statisticsContainer">
+          <div class="statistics">
+            <div class="statistics-Item">
+              <div class="statistics-Item-conten">
+                <h6 class="statistics-Item-conten-text">Bank Actual</h6>
+                <h4 id="bankActual" class="statistics-Item-conten-number">0.0</h4>
+                <h6 class="statistics-Item-conten-porcentaje">
+                  <i class="icon ion-md-arrow-dropup-circle"></i> 50.50%
+                </h6>
               </div>
             </div>
-          </div>
-        </section>
-        <!------ fin formulario tike------->
-        <!-- ------info estadisticas--------- -->
-        <section class="py-3">
-          <div class="container">
-            <div class="card rounded-0">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-lg-3 col-md-6 d-flex stat my-3">
-                    <div class="mx-auto">
-                      <h6 class="text-muted">Bank Actual</h6>
-                      <h4 id="bankActual" class="font-weight-bold">0.0</h4>
-                      <h6 class="text-success">
-                        <i class="icon ion-md-arrow-dropup-circle"></i> 50.50%
-                      </h6>
-                    </div>
+            <div class="statistics-Item">
+              <div class="statistics-Item-conten">
+                <h6 class="statistics-Item-conten-text">Bank Inical</h6>
+                <h4 id="bankInicial" class="statistics-Item-conten-number">0.0</h4>
+                <h6 class="statistics-Item-conten-porcentaje">
+                  <i class="icon ion-md-arrow-dropup-circle"></i> 25.50%
+                </h6>
+              </div>
+            </div>
+            <div class="statistics-Item">
+              <div class="statistics-Item-conten">
+                <h6 class="statistics-Item-conten-text">Ingresos</h6>
+                <h4 id="ingreso" class="statistics-Item-conten-number">0.0</h4>
+                <h6 class="statistics-Item-conten-porcentaje">
+                  <i class="icon ion-md-arrow-dropup-circle"></i> 75.50%
+                </h6>
+              </div>
+            </div>
+            <div class="statistics-Item">
+              <div class="statistics-Item-conten">
+                <h6 class="statistics-Item-conten-text">Egreso</h6>
+                <h4 id="egreso" class="statistics-Item-conten-number">0.0</h4>
+                <h6 class="statistics-Item-conten-porcentaje">
+                  <i
+                    id="porcentajeEgreso"
+                    class="icon ion-md-arrow-dropup-circle"
+                  ></i>
+                </h6>
+              </div>
+            </div>
+            <div class="statistics-Item">
+              <div class="statistics-Item-conten">
+                <h6 class="statistics-Item-conten-text">% Stake</h6>
+                <h4 id="porcentajeStake" class="statistics-Item-conten-number">500</h4>
+                <h6 class="statistics-Item-conten-porcentaje">
+                  <i class="icon ion-md-arrow-dropup-circle"></i> 15.50%
+                </h6>
+              </div>
+            </div>
+            <div class="statistics-Item">
+              <div class="statistics-Item-conten">
+                <h6 class="statistics-Item-conten-text">Stake</h6>
+                <h4 id="stake" class="statistics-Item-conten-number">500</h4>
+                <h6 class="statistics-Item-conten-porcentaje">
+                  <i class="icon ion-md-arrow-dropup-circle"></i> 15.50%
+                </h6>
+              </div>
+            </div>
+            <div class="statistics-Item">
+              <div class="statistics-Item-conten">
+                <h6 class="statistics-Item-conten-text">Ingresos Mes Anterior</h6>
+                <h4 class="statistics-Item-conten-number">500</h4>
+                <h6 class="statistics-Item-conten-porcentaje">
+                  <i class="icon ion-md-arrow-dropup-circle"></i> 100.0%
+                </h6>
+              </div>
+            </div>
+            <div class="statistics-Item">
+              <div class="statistics-Item-conten-btn">
+                <div>
+                  <div class="btn-general btnActivos" id="modificarBank">
+                    <span></span>
+                    Modificar Bank
                   </div>
-                  <div class="col-lg-3 col-md-6 d-flex stat my-3">
-                    <div class="mx-auto">
-                      <h6 class="text-muted">Bank Inical</h6>
-                      <h4 id="bankInicial" class="font-weight-bold">0.0</h4>
-                      <h6 class="text-success">
-                        <i class="icon ion-md-arrow-dropup-circle"></i> 25.50%
-                      </h6>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 d-flex stat my-3">
-                    <div class="mx-auto">
-                      <h6 class="text-muted">Ingresos</h6>
-                      <h4 id="ingreso" class="font-weight-bold">0.0</h4>
-                      <h6 class="text-success">
-                        <i class="icon ion-md-arrow-dropup-circle"></i> 75.50%
-                      </h6>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 d-flex stat my-3">
-                    <div class="mx-auto">
-                      <h6 class="text-muted">Egreso</h6>
-                      <h4 id="egreso" class="font-weight-bold">0.0</h4>
-                      <h6 class="text-success">
-                        <i id="porcentajeEgreso" class="icon ion-md-arrow-dropup-circle"></i>
-                      </h6>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 d-flex stat my-3">
-                    <div class="mx-auto">
-                      <h6 class="text-muted">% Stake</h6>
-                      <h4 id="porcentajeStake" class="font-weight-bold">
-                        500
-                      </h4>
-                      <h6 class="text-success">
-                        <i class="icon ion-md-arrow-dropup-circle"></i> 15.50%
-                      </h6>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 d-flex stat my-3">
-                    <div class="mx-auto">
-                      <h6 class="text-muted">Stake</h6>
-                      <h4 id="stake" class="font-weight-bold">500</h4>
-                      <h6 class="text-success">
-                        <i class="icon ion-md-arrow-dropup-circle"></i> 15.50%
-                      </h6>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 d-flex stat my-3">
-                    <div class="mx-auto">
-                      <h6 class="text-muted">Ingresos Mes Anterior</h6>
-                      <h4 class="font-weight-bold">500</h4>
-                      <h6 class="text-success">
-                        <i class="icon ion-md-arrow-dropup-circle"></i> 100.0%
-                      </h6>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 d-flex stat my-3">
-                    <div class="mx-auto">
-                      <div>
-                        <div class="btn-general btnActivos" id="modificarBank">
-                          <span></span>
-                          Modificar Bank
-                        </div>
-                      </div>
-                      <div>
-                        <div class="btn-general">
-                          <span></span> Finalizar Mes
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                </div>
+                <div>
+                  <div class="btn-general btnActivos"><span></span> Finalizar Mes</div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <!-- ------info estadisticas--------- -->
-        <!-------popupWindow--------->
-        <div class="overlay" id="overlay">
-          <div class="popup" id="popup">
-            <a href="#a" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-            <h3 class="popup-title">title</h3>
-            <h5 class="popup-subtitle">subtitle</h5>
-            <form action="">
+        </div>
+
+        <!-- fin info estadisticas -->
+      </section>
+
+      <!-------popupWindow--------->
+      <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+          <a href="#a" id="btn-cerrar-popup" class="btn-cerrar-popup"
+            ><i class="fas fa-times"></i
+          ></a>
+          <h3 class="popup-title">title</h3>
+          <h5 class="popup-subtitle">subtitle</h5>
+          <form action="">
+            <div id="inputsModifTike">
+              <div action="#" class="form" id="infoTike"></div>
+            </div>
+            <div id="inputsModifBank">
               <div class="contenedor-inputs">
                 <div class="input">
                   <input id="bank" type="number" required />
@@ -283,83 +353,95 @@
                   <label>Porcentaje A Invertir</label>
                 </div>
               </div>
-              <div class="conten-btn">
-                <!-- button delete -->
-                <button id="btnModificar" class="btn-general" data-modificar="" value="Modificar">
-                  MODIFICAR<span></span>
-                </button>
-                <button class="btn-delete">
-                  
-                  <div class="btn-delete__icon">
-                    <svg class="btn-delete__icon-top">
-                      <use href="#icon-trash-top"></use>
-                    </svg>
-                    <svg class="btn-delete__icon-bottom">
-                      <use href="#icon-trash-bottom"></use>
-                    </svg>
-                    <span class="span"></span>
-                  </div>
-                  <span class="btn-delete__text">Eliminar</span>
-                  
-                </button>
-                <!-- fin button delete -->
-              </div>
-            </form>
+            </div>
+            <div class="conten-btn">
+              <!-- button delete -->
+              <button
+                id="btnModificar"
+                class="btn-general"
+                data-modificar=""
+                value="Modificar"
+              >
+                MODIFICAR<span></span>
+              </button>
+              <button id="btnDelete" class="btn-delete">
+                <div class="btn-delete__icon">
+                  <svg class="btn-delete__icon-top">
+                    <use href="#icon-trash-top"></use>
+                  </svg>
+                  <svg class="btn-delete__icon-bottom">
+                    <use href="#icon-trash-bottom"></use>
+                  </svg>
+                </div>
+                <span class="btn-delete__text">Eliminar</span>
+              </button>
+              <!-- fin button delete -->
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-------Fin popupWindow--------->
+
+      <!-- -------registro tabla------>
+      <section>
+        <div class="containerTable">
+          <div class="row">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Fecha</th>
+                  <th>Evento</th>
+                  <th>Cuota</th>
+                  <th>Stake</th>
+                  <th>Estado</th>
+                  <th>Beneficio</th>
+                </tr>
+              </thead>
+              <tbody id="listaRegistro"></tbody>
+            </table>
           </div>
         </div>
-        <!-------Fin popupWindow--------->
-        <!-- -------registro tabla------>
-        <section>
-          <div class="containerTable">
-            <div class="row">
-              <table>
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Fecha</th>
-                    <th>Evento</th>
-                    <th>Cuota</th>
-                    <th>Stake</th>
-                    <th>Estado</th>
-                    <th>Beneficio</th>
-                  </tr>
-                </thead>
-                <tbody id="listaRegistro"></tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-        <!-- ------fin registro tabla ------->
-      </div>
+      </section>
+      <!-- ------fin registro tabla ------->
     </div>
-  </div>
 
-  <!-- Icons -->
-  <svg width="0" height="0" style="display: none" viewBox="0 0 25 25">
-    <!-- icon delete -->
-    <symbol id="icon-trash-top">
-      <path
-        d="M24.429,5.571H19.071V4.679A2.682,2.682,0,0,0,16.393,2H12.821a2.682,2.682,0,0,0-2.679,2.679v.893H4.786A1.788,1.788,0,0,0,3,7.357V8.25a.893.893,0,0,0,.893.893H25.321a.893.893,0,0,0,.893-.893V7.357A1.788,1.788,0,0,0,24.429,5.571Zm-12.5-.893a.894.894,0,0,1,.893-.893h3.571a.894.894,0,0,1,.893.893v.893H11.929Z" />
-    </symbol>
-    <symbol id="icon-trash-bottom">
-      <path
-        d="M6,12V25.393a2.682,2.682,0,0,0,2.679,2.679h12.5a2.682,2.682,0,0,0,2.679-2.679V12Zm5.357,11.607a.893.893,0,0,1-1.786,0V15.571a.893.893,0,1,1,1.786,0Zm4.464,0a.893.893,0,0,1-1.786,0V15.571a.893.893,0,1,1,1.786,0Zm4.464,0a.893.893,0,0,1-1.786,0V15.571a.893.893,0,1,1,1.786,0Z"
-        transform="translate(-0.321 -1.071)" />
-    </symbol>
-    <!-- fin icon delete -->
-  </svg>
+    <!-- Icons -->
+    <svg width="0" height="0" style="display: none" viewBox="0 0 25 25">
+      <!-- icon delete -->
+      <symbol id="icon-trash-top">
+        <path
+          d="M24.429,5.571H19.071V4.679A2.682,2.682,0,0,0,16.393,2H12.821a2.682,2.682,0,0,0-2.679,2.679v.893H4.786A1.788,1.788,0,0,0,3,7.357V8.25a.893.893,0,0,0,.893.893H25.321a.893.893,0,0,0,.893-.893V7.357A1.788,1.788,0,0,0,24.429,5.571Zm-12.5-.893a.894.894,0,0,1,.893-.893h3.571a.894.894,0,0,1,.893.893v.893H11.929Z"
+        />
+      </symbol>
+      <symbol id="icon-trash-bottom">
+        <path
+          d="M6,12V25.393a2.682,2.682,0,0,0,2.679,2.679h12.5a2.682,2.682,0,0,0,2.679-2.679V12Zm5.357,11.607a.893.893,0,0,1-1.786,0V15.571a.893.893,0,1,1,1.786,0Zm4.464,0a.893.893,0,0,1-1.786,0V15.571a.893.893,0,1,1,1.786,0Zm4.464,0a.893.893,0,0,1-1.786,0V15.571a.893.893,0,1,1,1.786,0Z"
+          transform="translate(-0.321 -1.071)"
+        />
+      </symbol>
+      <!-- fin icon delete -->
+    </svg>
 
-  <!-- JavaScripti icon -->
-  <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
-  <script src="https://kit.fontawesome.com/753f88eab6.js" crossorigin="anonymous"></script>
+    <!-- JavaScripti icon -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/753f88eab6.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- documentos js -->
-  <script src="/assets/js/datos.js"></script>
-  <script src="/assets/js/miniApps/popupBank.js"></script>
-  <script src="/assets/js/miniApps/switch.js"></script>
-  <script src="/assets/js/formatos.js"></script>
-  <script src="/assets/js/form.js"></script>
-  <script src="/assets/js/app.js"></script>
-</body>
-
+    <!-- bibliotecas-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <!-- documentos js -->
+    <script src="./assets/js/miniApps/selectbox.js"></script>
+    <script src="/assets/js/datos.js"></script>
+    <script src="/assets/js/miniApps/popupBank.js"></script>
+    <script src="/assets/js/miniApps/switch.js"></script>
+    <script src="/assets/js/formatos.js"></script>
+    <script src="/assets/js/form.js"></script>
+    <script src="/assets/js/app.js"></script>
+  </body>
 </html>

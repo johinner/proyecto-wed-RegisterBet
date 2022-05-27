@@ -49,6 +49,7 @@ a:hover {
 
 .btnActivos{
     margin-bottom: 15px;
+    margin-left: 20px;
 }
 /* -----Fin estilos button---- */
 
@@ -72,15 +73,52 @@ a:hover {
     padding: 0px;
 }
 
-.card-body{
-    padding: 0px;
+.statisticsContainer{
+    display: flex;
+    box-sizing: border-box;
 }
-.row{
-    margin: 0px;
-   
+.statistics{
+    display: flex;
+    padding-left: 30px;
+    flex-wrap: wrap;
+    height: 200px;
+    
+}
+.statistics-Item{
+    display: flex;
+    width: 20%;
+    height: 100px;
+    position: relative;
+    border-right: 1px solid var(--grey);
+    padding: 0px;
+    margin-bottom: 1rem;
+    margin-right: 30px;
+    border-right: solid 1px;   
+}
+
+.statistics-Item-conten{
+width: 160px;
+margin-left: auto;
+margin-right: auto;
+}
+.statistics-Item-conten-text{
+    width: 100%;
+    color: #6c757d;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.statistics-Item-conten-number{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.statistics-Item-conten-porcentaje{
+    color: #28a745;
+    font-size: 1rem;
+    
 }
 .text-muted{
-   
     width: 100px;
 }
 /* .row button{
@@ -109,3 +147,7 @@ a:hover {
 #porcentajeStake::after {
     content: "%";
   }
+
+.container-estadisticas{
+    display: flex;
+}

@@ -1,0 +1,240 @@
+/*   color variables */
+/*   border radius */
+.insertTike {
+  width: 14rem;
+  padding: 10PX;
+  font-family: "Convergence", sans-serif;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: flex-start;
+  font-size: 0.8rem;
+  background-color: #060b23;
+}
+.insertTike h1 {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.btn-tike {
+  margin: 0;
+  border: 0;
+  background: #091034;
+  color: #ffffff;
+  font-family: "Convergence", sans-serif;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7);
+  border-left: 4px solid #ffffff;
+  border-right: 4px solid #ffffff;
+}
+
+.form {
+  position: relative;
+  margin-bottom: 1rem;
+  width: 11.5rem;
+  height: 3rem;
+}
+.form__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #e1e5ee;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: inherit;
+  color: #ffffff;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+  /* Change border when input focus*/
+}
+.form__input:hover {
+  border-color: #adffff;
+}
+.form__input:focus {
+  border-color: #18ffff;
+}
+.form__label {
+  position: absolute;
+  left: 1rem;
+  top: 0.8rem;
+  padding: 0 0.5rem;
+  color: #ffffff;
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  background-color: #060b23;
+}
+
+.form__input:not(:-moz-placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+
+.form__input:not(:-ms-input-placeholder).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.contedorSelect {
+  width: 11.5rem;
+  max-width: 1000px;
+  margin: auto;
+  color: #ffffff;
+}
+
+.selectbox {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.select {
+  background: #060b23;
+  width: 100%;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s ease all;
+  margin-bottom: 20px;
+  padding: 5px;
+  position: relative;
+  border: 2px solid transparent;
+  border: 2px solid #e1e5ee;
+}
+
+.select.active {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.16);
+  border: 2px solid #18ffff;
+}
+
+.select.active:before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  border-top: 12px solid #18ffff;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid transparent;
+  position: absolute;
+  bottom: -25px;
+  left: calc(50% - 15px);
+}
+
+.select i {
+  font-size: 2em;
+  margin-left: 10px;
+  margin-right: 5px;
+  color: #18ffff;
+}
+
+.contenido-select .titulo {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.contenido-select .descripcion {
+  font-size: 0.7rem;
+}
+
+.opciones {
+  background: #161d34;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.16);
+  max-height: 300px;
+  overflow: auto;
+  z-index: 150;
+  width: 100%;
+  display: none;
+}
+.opciones.active {
+  display: block;
+  position: absolute;
+  -webkit-animation: fadeIn 0.3s forwards;
+          animation: fadeIn 0.3s forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    transform: translateY(-100px) scale(0.5);
+  }
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-100px) scale(0.5);
+  }
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+.contenido-opcion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #18ffff;
+  transition: 0.2s ease all;
+  padding: 5px;
+}
+.contenido-opcion-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  padding-top: 4px;
+  border-radius: 40%;
+  text-align: center;
+  box-shadow: -3px 5px 15px rgba(0, 0, 0, 0.911);
+  background: #5b6b6b;
+}
+.contenido-opcion-logo h2 {
+  font-size: 1.4rem;
+  line-height: 0.1;
+}
+.contenido-opcion-logo h2:first-child {
+  margin-bottom: 10px;
+}
+.contenido-opcion:hover {
+  background: #18ffff;
+  color: black;
+}
+.contenido-opcion .titulo {
+  margin-bottom: 0;
+}
+
+.contenido-select .contenido-opcion {
+  padding: 0;
+  border-bottom: 2px solid transparent;
+}
+
+.contenido-select .contenido-opcion:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+.select:hover {
+  border-color: #adffff;
+}
+
+.descripcion {
+  margin-bottom: 0;
+}/*# sourceMappingURL=input.css.map */
