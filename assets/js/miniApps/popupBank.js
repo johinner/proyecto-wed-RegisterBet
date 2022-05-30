@@ -39,11 +39,25 @@ btnModificar.addEventListener('click', () =>{
         }else{
             bankInicial = parseInt(bank.value);
         }
+        if (porcentaje.value === '' && bank.value === ''){
+            showMessage('Avertencia', 'No realizo ningula modificacion')
+        }else{
+            showMessage('Exitoso', 'Modificacion confirmada', 'success')
+        }
+        
         cargarEstadisticas()
     }
 
     if(btnModificar.dataset.modificar === 'modificarTike'){
-        console.log('estas en tike')
+        let ID = parseInt(document.querySelector('.inputsModifTike #BaseData').value);
+        const indice = Registro.findIndex((item) => item.id === ID);
+        Registro[indice].cuota = document.querySelector('.inputsModifTike #cuota').value;
+
+        console.log(Registro)
+        cargarApp();
+        ActiveWindow('off');
+        showMessage('Exitoso', 'Modificacion confirmada', 'success')
+
     }
 })
 
@@ -60,12 +74,12 @@ btnDeletes.forEach((btn)=>{
         }
     })
 })
-// funcion btn item tike tabla
+// funcion btn item tabla list
 const modificarItemTike = (id) =>{
     ActiveWindow('on');
     contentWindow('modificarItemTike')
     infoTike(Registro, id);
-    popupTitle.innerHTML = `TIKE # ${id}`
+    popupTitle.innerHTML = `Registro Numero ${id}`
     popupSubTitle.innerHTML = ''
     
 }
@@ -84,7 +98,6 @@ const ActiveWindow = (active) => {
  const contentWindow = (btnApplication) => {
         if (btnApplication === 'modificarItemTike'){
             btnModificar.dataset.modificar = 'modificarTike'
-
             inputsModifTike.classList.remove('visible')
             btnDelete.classList.remove('visible')
             inputsModifBank.classList.add('visible');
@@ -96,4 +109,9 @@ const ActiveWindow = (active) => {
             inputsModifBank.classList.remove('visible');
             btnDelete.classList.add('visible');
         }
+ }
+
+
+ const modificarRegistro = () =>{
+
  }

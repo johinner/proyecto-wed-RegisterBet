@@ -1,3 +1,5 @@
+let selectResult
+
 const select = document.querySelector('#select'),
       opciones = document.querySelector('#opciones'),
       contenidoSelect = document.querySelector('#select .contenido-select'),
@@ -7,18 +9,30 @@ document.querySelectorAll('#opciones > .opcion').forEach((opcion) => {
     opcion.addEventListener('click', (e) => {
         e.preventDefault;
         contenidoSelect.innerHTML = e.currentTarget.innerHTML;
-        // console.log(e.currentTarget.innerHTML)
+        selectResult = e.currentTarget.querySelector('.contenido-opcion').dataset.opcion
         // toggle si tiene la clase se la quita si no se la incluye
         select.classList.toggle('active')
         opciones.classList.toggle('active')
         hiddenInput.value = e.currentTarget.querySelector('.titulo').innerText;
+        console.log(selectResult)
     })
 });
 
 select.addEventListener('click', () => {
+    console.log('ok')
     select.classList.toggle('active')
     opciones.classList.toggle('active')
 })
+
+//const selectItem = document.querySelector('#selectItem');
+
+// selectItem.addEventListener('click', () => {
+//     select.classList.toggle('active')
+//     opciones.classList.toggle('active')
+// })
+
+
+
 
 // efecto maquina de escribir con typed
 /*const typed = new Typed('.typed', {

@@ -1,7 +1,9 @@
 :root {
+    --navbar:#28a745;
     --primary: #111B54;
     --light: #ffffff;
     --grey: #efefef;
-    --btn-background:  #111B54;
+    --btn-background: #091034;
     --btn-background-hover: #081141;
 }
+

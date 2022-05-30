@@ -1,19 +1,26 @@
-
-const form = document
-  .querySelector("form")
-  .addEventListener("submit", function (e) {
+document.querySelector("#insertTike").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const fecha = e.path[0][0].value;
-    const result = e.path[0][1].value;
-    const evento = e.path[0][2].value;
-    const cuota = parseInt(e.path[0][3].value);
-    const stake = parseInt(e.path[0][4].value);
+     const evento = 'Global'    
+     const result = selectResult;
+     const fecha = document.getElementById('fecha').value;
+     const cuota = parseInt(document.getElementById('cuota').value);
+     const stake = parseInt(document.getElementById('stake').value);
 
-    Registro.push(new Tike(fecha, evento, cuota, stake, result));
-    cargarApp()
+     if (result === undefined){
+      showMessage('Error', 'A un le falta Selecionar un resultado', 'danger');
+     }else{
+      Registro.unshift(new Tike(fecha, evento, cuota, stake, result));
+      cargarApp()
+      showMessage('Exitoso', 'Nuevo registro agregado', 'success');
+      document.getElementById('cuota').value = ''
+      document.getElementById('stake').value = ''
+     }
+  
   });
 
-  
-//por crear en el DOM
+
+
+
+
 

@@ -6,13 +6,12 @@ body.dark {
   background: #343d5b;
   border-radius: 1000px;
   border: none;
-  position: relative;
+  position: absolute;
+  right: 300px;
   cursor: pointer;
   display: flex;
   outline: none;
   height: 30px;
-  margin-top: auto;
-  margin-bottom: auto;
   margin-right: 15px;
 }
 .switch::after {
@@ -45,4 +44,4 @@ body.dark {
   display: block;
   background: none;
   color: #fff;
-}/*# sourceMappingURL=switch.css.map */
+}

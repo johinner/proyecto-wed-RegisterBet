@@ -2,9 +2,10 @@ let bankInicial = 0;
 let porcentajeStake = 0;
 
 const Registro = [
-  new Tike("20/9/6", "futbol", 4, 5000, "+1/2"),
-  new Tike("20/9/6", "futbol", 2, 4000, "-"),
-  new Tike("20/9/6", "futbol", 5, 4000, "-1/2"),
+  new Tike("20/9/6", "futbol", 4, 5000, "+ 100%"),
+  new Tike("20/9/6", "futbol", 2, 4000, "- 100%"),
+  new Tike("20/9/6", "futbol", 5, 4000, "- 50%"),
+  new Tike("20/9/6", "futbol", 5, 4000, "Nula"),
 ];
 
 cargarApp = () => {
@@ -49,28 +50,28 @@ cargarRegitro = (lista) => {
     const element = document.createElement("tr");
     element.className = `conten`;
     let beneficio,
-      estado = { class: "status-pending", nombre: "Null" };
+      estado = { class: "status-pending", nombre: "Nula" };
     beneficio = 0;
 
-    if (item.result === "+") {
+    if (item.result === "+ 100%") {
       beneficio = item.cuota * item.stake - item.stake;
-      estado.nombre = "positive";
+      estado.nombre = "+ 100%";
       estado.class = "status-paid";
     }
-    if (item.result === "+1/2") {
+    if (item.result === "+ 50%") {
       beneficio = (item.cuota * item.stake - item.stake) / 2;
-      estado.nombre = "1/2 positive";
+      estado.nombre = "+ 50%";
       estado.class = "status-paid";
     }
-    if (item.result === "-") {
+    if (item.result === "- 100%") {
       beneficio = item.stake * -1;
       estado.class = "status-unpaid";
-      estado.nombre = "negative";
+      estado.nombre = "- 100%";
     }
-    if (item.result === "-1/2") {
+    if (item.result === "- 50%") {
       beneficio = item.stake * -0.5;
       estado.class = "status-unpaid";
-      estado.nombre = "1/2 negative";
+      estado.nombre = "- 50%";
     }
 
     element.innerHTML = `  <td>${item.id}</td>
@@ -96,44 +97,51 @@ cargarRegitro = (lista) => {
 };
 
 infoTike = (tike, id) => {
-  const indice = tike.findIndex((item) => item.id === id)
+  const indice = tike.findIndex((item) => item.id === id);
+
+  document.getElementById("inputsModifTike").innerHTML = `
+              <div class='inputsModifTike'>  
+              <form action="#" class="form">
+
+
+                  <div class="form__div flexWhidth visible">
+                    <input value='${tike[indice].id}' type="number" required class="form__input" id="BaseData" placeholder=" " />
+                    <label for="" class="form__label">ID</label>
+                  </div>
+
+                 <div class="form__div flexWhidth">
+                    <input value='${tike[indice].fecha}' class="form__input" id="fecha" placeholder=" " />
+                    <label for="" class="form__label">Fecha</label>
+                  </div>
       
-     const infoTike = document.getElementById('infoTike');
-     infoTike.innerHTML = `<div class="agregar">
- <div class="agregar-fecha">
-   <label>Fecha</label>
-   <input type="date" value="2022-05-01" />
- </div>
- <div class="agregar-resultado">
-   <label>Resultado</label>
-   <select class="agregar-resultado-select" id="select">
-   <option selected="">${tike[indice].result}</option>
-     <option value="?">?</option>
-     <option value="+">+</option>
-     <option value="+1/2">+1/2</option>
-     <option value="N">N</option>
-     <option value="-">-</option>
-     <option value="-1/2">-1/2</option>
-   </select>
- </div>
- <div class="agregar-resultado">
-   <label>Evento</label>
-   <select class="agregar-resultado-select evento" id="select">
-     <option selected="">${tike[indice].evento}</option>
-     <option>Futbol</option>
-     <option>Teniz</option>
-     <option>Batquebol</option>
-     <option>Otro</option>
-   </select>
- </div>
- <div class="agregar-cuota">
-   <label>Cuota</label>
-   <input value="${tike[indice].cuota}" type="number" class="agregar_cuota" required placeholder="2.7" />
- </div>
- <div class="agregar-stake">
-   <label>Stake</label>
-   <input value="${tike[indice].stake}" type="number" class="agregar_stake" required placeholder="Stake sugerido" />
- </div>`;
+                  <div class="form__div flexWhidth">
+                    <input value='${tike[indice].cuota}' type="number" required class="form__input" id="cuota" placeholder=" " />
+                    <label for="" class="form__label">Cuota</label>
+                  </div>
+      
+                  <div class="form__div flexWhidth">
+                    <input value='${tike[indice].stake}' type="number" required class="form__input" id="stake" placeholder=" " />
+                    <label for="" class="form__label">Stake</label>
+                  </div>
+
+                  
+      
+
+                <div class="form__select flexWhidth">
+                    <select name="format" id="format">
+                       <option selected disabled>${tike[indice].result}</option>
+                       <option value="+ 100%">+ 100%</option>
+                       <option value="+ 50%">+ 50%</option>
+                       <option value="- 100%">- 100%</option>
+                       <option value="- 50%">- 50%</option>
+                       <option value="Nula">Nula</option>
+                    </select>
+                 </div>
+            </form>
+            </div> 
+          `;
+  //  ${tike[indice].result}
+  console.log(insertTike);
 };
 
 cargarApp();

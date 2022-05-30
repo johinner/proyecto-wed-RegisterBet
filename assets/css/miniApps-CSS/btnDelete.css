@@ -1,20 +1,20 @@
 svg {
   fill: currentColor;
 }
-.btn-delete{
-  
+.btn-delete{  
   display: flex;
   align-items: center;
   background-color: var(--btn-background);
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   padding: 0rem 0.8rem;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: -10px 10px 50px #b3b3b3, 10px -10px 50px #fff;
-  color: #fff;
+  border-left: 4px solid #ffffff;
+    border-right: 4px solid #ffffff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7);
   transition: background 0.4s;
   
 }
@@ -60,9 +60,10 @@ svg {
 }
 /* button text */
 .btn-delete__text{
-  font-family:sans-serif;
+  font-family: "Convergence", sans-serif;
   text-transform: uppercase;
-  color:  rgba(255, 255, 255, 0.596);
+  color: #ffffff;
+  letter-spacing: 1px; 
 }
 .btn-delete.delete .btn-delete__text{
   font-family:sans-serif;
