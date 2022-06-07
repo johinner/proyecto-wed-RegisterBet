@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      align-items: center;
+    }
+
+    .icono {
+      border-radius: 100%;
+      box-shadow: 0 2px 4px #0003;
+      cursor: pointer;
+      height: 50px;
+      padding: 17px 20px;
+      width: 50px;
+    }
+
+    .container .icono:first-child {
+      transform: rotate(180deg);
+    }
+
+    .icono:hover {
+      background-color: aquamarine;
+    }
+
+    .containeritem {
+      background-color: blueviolet;
+      width: 30%;
+      height: 50px;
+      border-radius: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="icono">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 16" width="10" height="16">
+        <path d="M.6 1.4l1.4-1.4 8 8-8 8-1.4-1.4 6.389-6.532-6.389-6.668z"></path>
+      </svg>
+    </div>
+    <div class="containeritem"></div>
+    <div class="icono">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 16" width="10" height="16">
+        <path d="M.6 1.4l1.4-1.4 8 8-8 8-1.4-1.4 6.389-6.532-6.389-6.668z"></path>
+      </svg>
+    </div>
+  </div>
+  <script></script>
+</body>
+
+</html>

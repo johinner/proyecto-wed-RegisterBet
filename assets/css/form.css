@@ -13,10 +13,12 @@
 .form{
   width: 14rem;
   padding: 2rem 1rem;
-  border-radius: 1rem;
   box-shadow: 0 10px 25px rgba(92,99,105,.2);
   height: 100vh;
+  background: var(--background-estadis);
+  position:relative;
 }
+
 .form__title{
   font-weight: 600;
   font-size: 1rem;
@@ -46,8 +48,7 @@
   left: 1rem;
   top: 1rem;
   padding: 0 .25rem;
-  background-color: #fff;
-  color: var(--input-color);
+  background: var(--background-estadis);
   font-size: var(--normal-font-size);
   transition: .3s;
 }
@@ -136,7 +137,7 @@ select::-ms-expand {
   opacity: 0;
   
 }
-.popup.active .inputsModifTike{animation: entrada 1s ease 1s forwards;} 
+.popup.active .inputsModifTike{animation: entrada 0.5s ease 0.5s forwards;} 
 
 @keyframes entrada{
 	from{

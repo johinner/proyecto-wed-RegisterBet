@@ -1,6 +1,7 @@
 let bankInicial = 0;
 let porcentajeStake = 0;
 
+
 const Registro = [
   new Tike("20/9/6", "futbol", 4, 5000, "+ 100%"),
   new Tike("20/9/6", "futbol", 2, 4000, "- 100%"),
@@ -27,7 +28,7 @@ cargarEstadisticas = () => {
   );
   document.getElementById("bankInicial").innerHTML = formatoMoneda(bankInicial);
   document.getElementById("porcentajeStake").innerHTML = porcentajeStake;
-  document.getElementById("stake").innerHTML = formatoMoneda(
+  document.getElementById("stakeInfo").innerHTML = formatoMoneda(
     (porcentajeStake * (bankInicial + ingresos)) / 100
   );
 
@@ -35,18 +36,19 @@ cargarEstadisticas = () => {
   const egreso = document.getElementById("egreso");
   if (ingresos > 0) {
     ingreso.innerHTML = formatoMoneda(ingresos);
-    egreso.innerHTML = "$ 0";
+    egreso.innerHTML = "0";
   } else {
-    ingreso.innerHTML = "$ 0";
+    ingreso.innerHTML = "0";
     egreso.innerHTML = formatoMoneda(ingresos);
   }
 };
 
-cargarRegitro = (lista) => {
+cargarRegitro = (Registro) => {
   const List = document.getElementById("listaRegistro");
   List.textContent = "";
+  let numero = Registro.length;
 
-  lista.forEach((item) => {
+  Registro.forEach((item) => {
     const element = document.createElement("tr");
     element.className = `conten`;
     let beneficio,
@@ -74,7 +76,7 @@ cargarRegitro = (lista) => {
       estado.nombre = "- 50%";
     }
 
-    element.innerHTML = `  <td>${item.id}</td>
+    element.innerHTML = `  <td>${numero}</td>
     <td>2022/05/06</td>
     <td>${item.evento}</td>
     <td>${item.cuota}</td>
@@ -91,12 +93,23 @@ cargarRegitro = (lista) => {
     </td>
     `;
     fragment.appendChild(element);
+    numero --;
   });
 
   List.appendChild(fragment);
 };
 
-infoTike = (tike, id) => {
+const modificarItemTike = (id) =>{
+  ActiveWindow('on');
+  contentWindow('modificarItemTike')
+  infoRegistro(Registro, id);
+  popupTitle.innerHTML = `Registro Numero ${id}`
+  popupSubTitle.innerHTML = ''
+  
+}
+
+
+infoRegistro = (tike, id) => {
   const indice = tike.findIndex((item) => item.id === id);
 
   document.getElementById("inputsModifTike").innerHTML = `
@@ -110,25 +123,22 @@ infoTike = (tike, id) => {
                   </div>
 
                  <div class="form__div flexWhidth">
-                    <input value='${tike[indice].fecha}' class="form__input" id="fecha" placeholder=" " />
+                    <input value='${tike[indice].fecha}' class="form__input" id="fechaRegistro" placeholder=" " />
                     <label for="" class="form__label">Fecha</label>
                   </div>
       
                   <div class="form__div flexWhidth">
-                    <input value='${tike[indice].cuota}' type="number" required class="form__input" id="cuota" placeholder=" " />
+                    <input value='${tike[indice].cuota}' type="number" required class="form__input" id="cuotaRegistro" placeholder=" " />
                     <label for="" class="form__label">Cuota</label>
                   </div>
       
                   <div class="form__div flexWhidth">
-                    <input value='${tike[indice].stake}' type="number" required class="form__input" id="stake" placeholder=" " />
+                    <input value='${tike[indice].stake}' type="number" required class="form__input" id="stakeRegistro" placeholder=" " />
                     <label for="" class="form__label">Stake</label>
                   </div>
 
-                  
-      
-
                 <div class="form__select flexWhidth">
-                    <select name="format" id="format">
+                    <select name="select" id="selectRegistro">
                        <option selected disabled>${tike[indice].result}</option>
                        <option value="+ 100%">+ 100%</option>
                        <option value="+ 50%">+ 50%</option>
@@ -140,8 +150,25 @@ infoTike = (tike, id) => {
             </form>
             </div> 
           `;
-  //  ${tike[indice].result}
-  console.log(insertTike);
 };
+
+const modificarRegistro = (Registro) =>{
+  let ID = parseInt(document.querySelector('.inputsModifTike #BaseData').value);
+  const indice = Registro.findIndex((item) => item.id === ID);
+  Registro[indice].cuota = document.querySelector('.inputsModifTike #cuotaRegistro').value;
+  Registro[indice].stake = document.querySelector('.inputsModifTike #stakeRegistro').value;
+  Registro[indice].result = document.querySelector('.inputsModifTike #selectRegistro').value;
+  cargarApp();
+  ActiveWindow('off');
+  showMessage('Exitoso', 'Modificacion confirmada', 'success')
+}
+
+const eliminarRegistro = (Registro) => {
+  let ID = parseInt(document.querySelector('.inputsModifTike #BaseData').value);
+  const indice = Registro.findIndex((item) => item.id === ID);
+  Registro.splice(indice,1)
+  console.log('ID eliminado #',ID, Registro)
+  cargarApp();
+}
 
 cargarApp();

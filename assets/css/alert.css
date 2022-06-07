@@ -10,7 +10,7 @@
     border: 1px solid var(--default);
     border-left: 5px solid var(--default);
     box-shadow: 0 0 4px #ddd, 0 2px 10px #ddd, 0 2px 20px #ddd;
-    
+    width: 30%;
     display: flex;
     align-items: center;
     padding: 6px 20px;
@@ -21,8 +21,9 @@
 
     position: absolute;
     right: 0;
+    bottom: 0;
     background: rgb(255, 255, 255);
-    z-index: 300;
+    z-index: 100;
   }
   
   .alert.close{

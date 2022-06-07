@@ -150,9 +150,9 @@
 /* -------ANIMACIONES------- */
 
 .popup.active{opacity: 1; transform: scale(1);}
-.popup.active h3{animation: entradaTitulo .8s ease .5s forwards;}
-.popup.active h5{animation: entradaSubtitulo .8s ease .5s forwards;}
-.popup.active .contenedor-inputs{animation: entradaInputs 1s ease 1s forwards;} 
+.popup.active h3{animation: entradaTitulo .6s ease .5s forwards;}
+.popup.active h5{animation: entradaSubtitulo .7s ease .5s forwards;}
+.popup.active .contenedor-inputs{animation: entradaInputs 0.5s ease 0.5s forwards;} 
 
 @keyframes entradaTitulo{
 	from{

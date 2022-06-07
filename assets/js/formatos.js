@@ -1,6 +1,7 @@
 const formatoMoneda = (valor)=>{
-    return valor.toLocaleString('COP',{style:'currency', currency:'COP', minimumFractionDigits:0});
+    return valor.toLocaleString('USD',{ currency:'USD', minimumFractionDigits:1});
 }
+
 
 const formatoPorcentaje = (valor)=>{
     return valor.toLocaleString('en-US',{style:'percent', minimumFractionDigits:2});

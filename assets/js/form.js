@@ -15,8 +15,8 @@ document.querySelector("#insertTike").addEventListener("submit", function (e) {
       showMessage('Exitoso', 'Nuevo registro agregado', 'success');
       document.getElementById('cuota').value = ''
       document.getElementById('stake').value = ''
+      console.log(stake)
      }
-  
   });
 
 

@@ -49,19 +49,12 @@ btnModificar.addEventListener('click', () =>{
     }
 
     if(btnModificar.dataset.modificar === 'modificarTike'){
-        let ID = parseInt(document.querySelector('.inputsModifTike #BaseData').value);
-        const indice = Registro.findIndex((item) => item.id === ID);
-        Registro[indice].cuota = document.querySelector('.inputsModifTike #cuota').value;
-
-        console.log(Registro)
-        cargarApp();
-        ActiveWindow('off');
-        showMessage('Exitoso', 'Modificacion confirmada', 'success')
-
+        modificarRegistro(Registro);
     }
 })
 
 const btnDeletes = document.querySelectorAll('.btn-delete')
+
 
 btnDeletes.forEach((btn)=>{
     btn.addEventListener('click', (e) =>{
@@ -70,19 +63,14 @@ btnDeletes.forEach((btn)=>{
             btn.classList.add('delete')
             setTimeout(()=>{
                 btn.classList.remove('delete')
-            },2500)
+                eliminarRegistro(Registro);
+                ActiveWindow('off')
+                showMessage('Exitoso', 'Eliminacion confirmada', 'success')
+            },1200)
         }
     })
 })
 // funcion btn item tabla list
-const modificarItemTike = (id) =>{
-    ActiveWindow('on');
-    contentWindow('modificarItemTike')
-    infoTike(Registro, id);
-    popupTitle.innerHTML = `Registro Numero ${id}`
-    popupSubTitle.innerHTML = ''
-    
-}
 
 const ActiveWindow = (active) => {
     if (active === 'on'){
@@ -112,6 +100,3 @@ const ActiveWindow = (active) => {
  }
 
 
- const modificarRegistro = () =>{
-
- }

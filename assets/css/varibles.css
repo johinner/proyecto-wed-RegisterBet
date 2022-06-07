@@ -1,9 +1,31 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
     --navbar:#28a745;
     --primary: #111B54;
     --light: #ffffff;
     --grey: #efefef;
-    --btn-background: #091034;
+    --btn-background: #242f64;
     --btn-background-hover: #081141;
+    --background-estadis: #eee;
 }
+
+body {
+    overflow: hidden;
+    font-weight: 400;
+    color: var(--primary);
+    background: #ffffff;
+    font-family:  sans-serif;
+    transition: 0.3s ease all;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
 

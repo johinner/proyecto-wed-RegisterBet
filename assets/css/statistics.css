@@ -1,0 +1,182 @@
+.content {
+  overflow-y: auto;
+  height: 100vh;
+  padding-bottom: 5rem;
+}
+
+/*====== stadisticas =====*/
+
+.estadisticas{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 210px;
+  padding: 20px;
+}
+.estadisticas-category {
+  padding: 0 5vw;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.slider{
+  padding: 0 2vw;
+  height: 110px;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  align-items: center;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* btn scroll */
+.pre-btn,
+.nxt-btn {
+  border: none;
+  border-radius: 100%;
+  box-shadow: 0 2px 4px #0003;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 290;
+  visibility: visible;
+}
+
+.pre-btn.visible,
+.nxt-btn.visible{
+  visibility: hidden;
+}
+
+
+.pre-btn {
+  left: 0;
+  bottom: 55px;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+  bottom: 55px;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.7;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+/* fin btn scroll */
+.flex{
+  flex: 0 0 auto;
+}
+
+.slider-card {
+  display: flex;
+  width: 270px;
+  height: 75px;
+  border-radius: 16px;
+  padding: 12px;
+  margin-left: 32px;
+  margin-top: auto;
+  margin-bottom: auto;
+  
+  cursor: default; 
+}
+.slider-card:hover:not(.slider-active){
+  background:  #F0F3FA;
+}
+
+.slider-card.slider-active{
+  box-shadow: 0 0 2px 0 #e0e3eb, 0 2px 24px 0 #e0e3eb;
+}
+
+.slider-card i{
+  font-size: 0.8rem;
+}
+.slider-card img{
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: 10px;
+
+}
+
+.slider-card-valor {
+  display: flex;
+  position: relative;
+  
+}
+
+.slider-card span:first-child {
+  font-size: 20px;
+  font-weight: 600;
+  color:  #131722;
+  line-height: 27px;
+}
+
+.slider-card-valor span:first-child {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  height: 24px;
+  
+}
+.slider-card-valor span:nth-child(2) {
+  color: #787b86;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 3px;
+  align-self: flex-end;
+  text-transform: uppercase;
+
+  
+}
+.slider-card-valor span:nth-child(3) {
+  margin-left: 12px;
+  font-weight: 600;
+  color: #28a745;
+  font-size: 1rem;
+  align-self: flex-end;
+}
+
+
+/* estadisticas sitios */
+.estadisticas-btn {
+  width: 100%;
+}
+
+.estadisticas-btn .btn-general {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
+/* barra navbar */
+.navbar {
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #f6f7fc91;
+  box-shadow: rgb(67 117 151) 0px 2px 7px 0px;
+  position: relative;
+  z-index: 298;
+}

@@ -34,8 +34,8 @@ const showMessage = (alert, message, cssClass)=>{
     <i class="fa fa-close"></i>
   </button>`
     
-    const container =  document.querySelector('.statisticsContainer');
-    const before = document.querySelector('.statistics');
+    const container =  document.querySelector('body');
+    const before = document.querySelector('.navbar');
     container.insertBefore(div,before);
   
     const alert_close = document.querySelector('.alert .close');
